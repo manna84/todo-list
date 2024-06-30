@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  background-image: linear-gradient(to right, #070088, #7100eb);
+}
+
+.container {
+  width: 100%;
+  max-width: 35%;
+  background-color: white;
+  margin: 100px auto;
+  padding: 40px;
+}
+
+.todo_box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.todo_box img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+.input_box {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e7e7e7;
+  border-radius: 25px;
+}
+
+.input_box input[type="text"] {
+  border: none;
+  background: transparent;
+  flex: 1;
+  padding: 15px;
+
+  outline: none;
+}
+
+#addBtn {
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  background-color: #e67e22;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task_list {
+  list-style: none;
+  margin: 30px 0;
+}
+
+ul li {
+  position: relative;
+  padding: 8px 20px 12px 50px;
+  cursor: pointer;
+  line-height: 35px;
+  /* background-color: aqua; */
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(/images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+  top: 14px;
+}
+
+.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+.checked::before {
+  background-image: url(/images/checked.png);
+}
+
+li span {
+  content: "\00d7";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  top: 6px;
+  right: 0;
+  text-align: center;
+  cursor: pointer;
+  line-height: 40px;
+}
+
+li span:hover {
+  background-color: #d1d1d1;
+  border-radius: 50%;
+}
